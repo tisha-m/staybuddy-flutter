@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './register.dart';
+import './home_screen.dart';
+import './forgot_password.dart';
 
 class UserLoginScreen extends StatefulWidget {
   const UserLoginScreen({super.key});
@@ -30,8 +33,21 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                 alignment: Alignment.centerLeft,
                 child: Text('Email', style: TextStyle(fontSize: 20)),
               ),
+
               TextField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.grey, width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color(0xFF428D52),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
               ),
 
               SizedBox(height: 20),
@@ -39,8 +55,21 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                 alignment: Alignment.centerLeft,
                 child: Text('Password', style: TextStyle(fontSize: 20)),
               ),
+
               TextField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.grey, width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color(0xFF428D52),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
               ),
 
               Row(
@@ -49,7 +78,11 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Checkbox(value: true, onChanged: (value) {}),
+                      Checkbox(
+                        value: true,
+                        activeColor: const Color(0xFF428D52),
+                        onChanged: (value) {},
+                      ),
                       const Text(
                         'Remember me',
                         style: TextStyle(
@@ -61,10 +94,18 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                   ),
 
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const UserForgotPasswordScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Forgot Password?',
-                      style: TextStyle(color: Colors.green),
+                      style: TextStyle(color: const Color(0xFF428D52)),
                     ),
                   ),
                 ],
@@ -72,9 +113,14 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
               SizedBox(height: 20),
 
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const UserHome()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color(0xFF428D52),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -102,7 +148,12 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
 
                   TextButton(
                     onPressed: () {
-                      // Sign up action
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const UserRegisterScreen(),
+                        ),
+                      );
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
