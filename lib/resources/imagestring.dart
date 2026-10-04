@@ -1,0 +1,1 @@
+const String ss="assets/images/splash_screen.png";
