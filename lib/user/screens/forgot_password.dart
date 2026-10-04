@@ -1,15 +1,106 @@
 import 'package:flutter/material.dart';
+import './login.dart';
 
 class UserForgotPasswordScreen extends StatefulWidget {
   const UserForgotPasswordScreen({super.key});
 
   @override
-  State<UserForgotPasswordScreen> createState() => _UserForgotPasswordScreenState();
+  State<UserForgotPasswordScreen> createState() =>
+      _UserForgotPasswordScreenState();
 }
 
 class _UserForgotPasswordScreenState extends State<UserForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Create New Password',
+                style: TextStyle(fontSize: 39, fontWeight: FontWeight.bold),
+              ),
+
+              SizedBox(height: 50),
+
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text('Current Password', style: TextStyle(fontSize: 20)),
+              ),
+
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Enter your current password',
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.grey, width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color(0xFF428D52),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'New Password',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Enter your new password',
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.grey, width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Color(0xFF428D52),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              SizedBox(height: 50),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UserLoginScreen(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF428D52),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  minimumSize: const Size(double.infinity, 60),
+                ),
+                child: const Text(
+                  'Reset Password',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

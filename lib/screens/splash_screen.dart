@@ -4,7 +4,6 @@ import '../user/screens/login.dart';
 import '../admin/screens/login.dart';
 import '../resources/imagestring.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -31,7 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     // After 3 seconds show white screen
     if (showSelectionScreen) {
       return Scaffold(
@@ -42,7 +40,6 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-        
                 const Text(
                   'Welcome to StayBuddy',
                   style: TextStyle(
@@ -51,9 +48,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: Color(0xFF356B48),
                   ),
                 ),
-        
+
                 const SizedBox(height: 40),
-        
+
                 // USER BUTTON
                 SizedBox(
                   width: double.infinity,
@@ -83,9 +80,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                 ),
-        
+
                 const SizedBox(height: 20),
-        
+
                 // ADMIN BUTTON
                 SizedBox(
                   width: double.infinity,
@@ -128,13 +125,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // First 3 seconds: SPLASH SCREEN
     return Scaffold(
-      body: SizedBox.expand(
-        child: Image.asset(
-          ss,
-          fit: BoxFit.cover,
-        ),
-      ),
+      body: SizedBox.expand(child: Image.asset(ss, fit: BoxFit.cover)),
     );
   }
 }
-
