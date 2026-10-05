@@ -105,7 +105,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                     },
                     child: const Text(
                       'Forgot Password?',
-                      style: TextStyle(color: const Color(0xFF428D52)),
+                      style: TextStyle(color:  Color(0xFF428D52)),
                     ),
                   ),
                 ],

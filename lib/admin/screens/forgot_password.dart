@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import './home_screen.dart';
-import './forgot_password.dart';
+import './login.dart';
 
-class AdminLoginScreen extends StatefulWidget {
-  const AdminLoginScreen({super.key});
+class AdminForgotPasswordScreen extends StatefulWidget {
+  const AdminForgotPasswordScreen({super.key});
 
   @override
-  State<AdminLoginScreen> createState() => _AdminLoginScreenState();
+  State<AdminForgotPasswordScreen> createState() =>
+      _AdminForgotPasswordScreenState();
 }
 
-class _AdminLoginScreenState extends State<AdminLoginScreen> {
+class _AdminForgotPasswordScreenState extends State<AdminForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,21 +20,20 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Welcome Back',
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                'Create New Password',
+                style: TextStyle(fontSize: 39, fontWeight: FontWeight.bold),
               ),
-
-              Text('Login to Continue', style: TextStyle(fontSize: 20)),
 
               SizedBox(height: 50),
 
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Email', style: TextStyle(fontSize: 20)),
+                child: Text('Current Password', style: TextStyle(fontSize: 20)),
               ),
 
               TextField(
                 decoration: InputDecoration(
+                  hintText: 'Enter your current password',
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.grey, width: 2),
                     borderRadius: BorderRadius.circular(10),
@@ -52,11 +51,15 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
               SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Password', style: TextStyle(fontSize: 20)),
+                child: Text(
+                  'New Password',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
 
               TextField(
                 decoration: InputDecoration(
+                  hintText: 'Enter your new password',
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.grey, width: 2),
                     borderRadius: BorderRadius.circular(10),
@@ -70,52 +73,15 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                   ),
                 ),
               ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Checkbox(
-                        value: true,
-                        activeColor: const Color(0xFFF38E6C),
-                        onChanged: (value) {},
-                      ),
-                      const Text(
-                        'Remember me',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              const AdminForgotPasswordScreen(),
-                        ),
-                      );
-                    },
-                    child: const Text(
-                      'Forgot Password?',
-                      style: TextStyle(color:  Color(0xFFF38E6C)),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
+              SizedBox(height: 50),
 
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const AdminHome()),
+                    MaterialPageRoute(
+                      builder: (context) => const AdminLoginScreen(),
+                    ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -126,7 +92,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                   minimumSize: const Size(double.infinity, 60),
                 ),
                 child: const Text(
-                  'Login',
+                  'Reset Password',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
