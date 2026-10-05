@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:staybuddy/resources/imagestring.dart';
 import 'pg_home.dart';
 import 'hostel_home.dart';
-import 'room_home.dart';
 
-class UserHome extends StatefulWidget {
-  const UserHome({super.key});
+class RoomHome extends StatefulWidget {
+  const RoomHome({super.key});
 
   @override
-  State<UserHome> createState() => _UserHomeState();
+  State<RoomHome> createState() => _RoomHomeState();
 }
 
-class _UserHomeState extends State<UserHome> {
+class _RoomHomeState extends State<RoomHome> {
   String selectedType = '';
   ButtonStyle filterButtonStyle(String type) {
     bool isSelected = selectedType == type;
@@ -131,7 +130,7 @@ class _UserHomeState extends State<UserHome> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Recommended Stays',
+                'Recommended Rooms',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
@@ -151,7 +150,7 @@ class _UserHomeState extends State<UserHome> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.asset(
-                                girls_hostel[0],
+                                rooms[0],
                                 width: 100,
                                 height: 100,
                                 fit: BoxFit.cover,
@@ -160,7 +159,7 @@ class _UserHomeState extends State<UserHome> {
                               const SizedBox(
                                 width: 100,
                                 child: Text(
-                                  'Divine Girls Hostel and PG',
+                                  'Broker: Mohit Sarvaiya',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -174,13 +173,11 @@ class _UserHomeState extends State<UserHome> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
-                                Text(
-                                  '“Padmalay”, Street No. 10, Kalavad Road, Rajkot, 360005.',
-                                ),
-                                Text('Contact Number: +91 88788 94094'),
+                                Text('Royal Park, Rajkot, Gujarat 360005.'),
                                 Text('Type of Room: Both AC and Non-AC rooms.'),
-                                Text('Occupancy: Double and Triple Sharing.'),
-                                Text('Meals: Included 3 times a day.'),
+                                Text('Occupancy: 3 Beds per room.'),
+                                Text('Gender: Male'),
+                                Text('Price: ₹6000 per month'),
                               ],
                             ),
                           ),
@@ -201,7 +198,7 @@ class _UserHomeState extends State<UserHome> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.asset(
-                                girls_pg[2],
+                                rooms[1],
                                 width: 100,
                                 height: 100,
                                 fit: BoxFit.cover,
@@ -210,7 +207,7 @@ class _UserHomeState extends State<UserHome> {
                               const SizedBox(
                                 width: 100,
                                 child: Text(
-                                  "Kashmira's Girls PG",
+                                  "Broker: Chetna Bharvada",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -225,12 +222,12 @@ class _UserHomeState extends State<UserHome> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Tagor Nagar Street 2, Kotecha Chowk, Near Saurashtra Highschool, Kalavad Road, Rajkot, Gujarat 360005.',
+                                  'Address: Shakti Nagar, Rajkot, Gujarat 360005.',
                                 ),
-                                Text('Contact Number: +91 63519 83760.'),
-                                Text('Type of Room: Both AC and Non-AC rooms.'),
-                                Text('Occupancy: Double and Triple Sharing.'),
-                                Text('Meals: Included 2 to 3 times a day.'),
+                                Text('Room Options: Only Non-AC rooms.'),
+                                Text('Occupancy: 4 beds per room.'),
+                                Text('Gender: Female'),
+                                Text('Price: ₹2500 per month.'),
                               ],
                             ),
                           ),
@@ -252,7 +249,7 @@ class _UserHomeState extends State<UserHome> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.asset(
-                                boys_hostel[6],
+                                rooms[2],
                                 width: 100,
                                 height: 100,
                                 fit: BoxFit.cover,
@@ -261,7 +258,7 @@ class _UserHomeState extends State<UserHome> {
                               const SizedBox(
                                 width: 100,
                                 child: Text(
-                                  'Vaidik Boys Hostel',
+                                  'Broker: Rathod Rajdeepsinh',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -276,12 +273,12 @@ class _UserHomeState extends State<UserHome> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'University Road, Indira Circle, Jalaram Nagar, Rajkot, Gujarat 360005.',
+                                  'Address: Pushkardham Society, Rajkot, Gujarat 360005.',
                                 ),
-                                Text('Contact Number: +91 99780 57515.'),
-                                Text('Type of Room: Only Non-AC rooms.'),
-                                Text('Occupancy: Double and Triple Sharing.'),
-                                Text('Meals: Included 3 times a day.'),
+                                Text('Room Options: Only Non-AC rooms.'),
+                                Text('Occupancy: 3 to 5 Beds per room.'),
+                                Text('Gender: Female'),
+                                Text('Price: ₹8000 per month.'),
                               ],
                             ),
                           ),

@@ -1,6 +1,6 @@
 name: staybuddy
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -22,3 +22,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/images/girls_hostel/
+    - assets/images/boys_hostel/
+    - assets/images/girls_pg/
+    - assets/images/boys_pg/
+    - assets/images/co-living/
+    - assets/images/rooms/
