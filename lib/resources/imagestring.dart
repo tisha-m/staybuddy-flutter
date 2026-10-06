@@ -1,4 +1,5 @@
 const String ss = "assets/images/splash_screen.png";
+const String profile = "assets/images/profile.png";
 
 const List<String> boys_hostel = [
   "assets/images/boys_hostel/Achievers_Hostel_and_PG_University_Road.jpg",
