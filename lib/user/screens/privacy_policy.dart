@@ -14,9 +14,6 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      // =========================
-      // APP BAR
-      // =========================
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -44,38 +41,24 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
               ),
             ),
 
-            // Keeps title centered
             const SizedBox(width: 48),
           ],
         ),
       ),
 
-      // =========================
-      // BODY
-      // =========================
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 15),
 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            // =========================
-            // INTRODUCTION
-            // =========================
             Text(
-              'Welcome to StayBuddy. Your privacy is '
-              'important to us. This Privacy Policy '
-              'explains how we collect, use, and '
-              'protect your information while using our '
-              'application.',
+              'Welcome to StayBuddy. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information while using our application.',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
             SizedBox(height: 18),
 
-            // =========================
-            // 1. INFORMATION WE COLLECT
-            // =========================
             Text(
               '1. Information We Collect:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -84,8 +67,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
             SizedBox(height: 2),
 
             Text(
-              'When you use StayBuddy, we may '
-              'collect the following information:',
+              'When you use StayBuddy, we may collect the following information:',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
@@ -129,9 +111,6 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
 
             SizedBox(height: 18),
 
-            // =========================
-            // 2. HOW WE USE YOUR INFORMATION
-            // =========================
             Text(
               '2. How We Use Your Information:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -146,61 +125,116 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
               '• Create and manage your account.\n'
               '• Display personalized stay listings.\n'
               '• Save your favourite stays.\n'
-              '• Improve the application\'s\n'
-              '   performance and user experience.\n'
-              '• Respond to user queries and support\n'
-              '   requests.',
+              '• Improve the application\'s performance and user experience.\n'
+              '• Respond to user queries and support requests.\n'
+              '• Maintain platform security.',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
             SizedBox(height: 18),
 
-            // =========================
-            // 3. DATA PROTECTION
-            // =========================
             Text(
-              '3. Data Protection:',
+              '3. Data Security:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
             Text(
-              'We take reasonable measures to protect '
-              'your personal information from unauthorized '
-              'access, misuse, or disclosure.',
+              'We take reasonable measures to protect your personal information from unauthorized access, misuse, or disclosure.\n'
+              'While we strive to keep your information secure, no online platform can guarantee complete security.',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
             SizedBox(height: 18),
 
-            // =========================
-            // 4. USER RIGHTS
-            // =========================
             Text(
-              '4. Your Rights:',
+              '4. Sharing of Information:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
             Text(
-              'You may access, update, or request deletion '
-              'of your personal information through your '
-              'account settings.',
+              'StayBuddy does not sell or rent your personal information to third parties.\n'
+              'Your information may only be shared:\n'
+              '• To maintain or improve our services.\n'
+              '• With your consent.',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
             SizedBox(height: 18),
 
-            // =========================
-            // 5. POLICY UPDATES
-            // =========================
             Text(
-              '5. Changes to This Policy:',
+              '5. User Responsibilities:',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
             Text(
-              'We may update this Privacy Policy from '
-              'time to time. Any changes will be reflected '
-              'on this page.',
+              'As a user, you are responsible for:\n'
+              '• Providing accurate information.\n'
+              '• Keeping your login credentials secure.\n'
+              '• Not sharing your account password with others.',
+              style: TextStyle(fontSize: 17, height: 1.2),
+            ),
+
+            SizedBox(height: 18),
+
+            Text(
+              '6. Your Rights:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            Text(
+              'You have the right to:\n'
+              '• View your profile information.\n'
+              '• Update your personal details.\n'
+              '• Remove saved favourite stays.\n'
+              '• Request account deletion by contacting the administrator.',
+              style: TextStyle(fontSize: 17, height: 1.2),
+            ),
+
+            SizedBox(height: 18),
+            Text(
+              '7. Third-Party Links:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            Text(
+              'StayBuddy may contain links or contact information for property owners. We are not responsible for the privacy practices of external websites or services.',
+              style: TextStyle(fontSize: 17, height: 1.2),
+            ),
+
+            SizedBox(height: 18),
+            Text(
+              "8. Children's Privacy:",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            Text(
+              'StayBuddy is intended for users who are at least 18 years old or have permission from a parent or guardian to use the platform.',
+              style: TextStyle(fontSize: 17, height: 1.2),
+            ),
+
+            SizedBox(height: 18),
+            Text(
+              '9. Changes to This Privacy Policy:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            Text(
+              'We may update this Privacy Policy from time to time. Any changes will be reflected on this page with the latest update date.',
+              style: TextStyle(fontSize: 17, height: 1.2),
+            ),
+
+            SizedBox(height: 18),
+            Text(
+              '10. Contact Us:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            Text(
+              'If you have any questions regarding Privacy Policy, you can contact us:\n'
+              'StayBuddy Support\n'
+              '📧 Email: support@staybuddy.com\n'
+              '📞 Phone: +91-9876543210\n'
+              '🕒 Support Hours: Monday – Saturday, 9:00 AM – 6:00 PM',
               style: TextStyle(fontSize: 17, height: 1.2),
             ),
 
@@ -209,9 +243,6 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
         ),
       ),
 
-      // =========================
-      // NAVBAR
-      // =========================
       bottomNavigationBar: const UserNavBar(selectedIndex: 3),
     );
   }

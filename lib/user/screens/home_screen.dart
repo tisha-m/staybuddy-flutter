@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:staybuddy/resources/imagestring.dart';
-import '../widgets/user_navbar.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({super.key});

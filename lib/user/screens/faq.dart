@@ -70,9 +70,6 @@ class _FAQState extends State<FAQ> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      // =====================================
-      // APP BAR
-      // =====================================
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -86,7 +83,6 @@ class _FAQState extends State<FAQ> {
               },
               icon: const Icon(Icons.arrow_back, color: Colors.black, size: 28),
             ),
-
             const Expanded(
               child: Center(
                 child: Text(
@@ -101,51 +97,34 @@ class _FAQState extends State<FAQ> {
                 ),
               ),
             ),
-
-            // Keeps title centered
             const SizedBox(width: 48),
           ],
         ),
       ),
 
-      // =====================================
-      // BODY
-      // =====================================
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-
         child: Column(
           children: [
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.only(top: 5, bottom: 10),
-
                 itemCount: faqList.length,
-
                 itemBuilder: (context, index) {
                   bool isExpanded = expandedIndex == index;
-
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-
                     child: faqItem(index: index, isExpanded: isExpanded),
                   );
                 },
               ),
             ),
-
-            // =====================================
-            // FOOTER
-            // =====================================
             const Padding(
               padding: EdgeInsets.only(bottom: 15),
-
               child: Column(
                 children: [
                   Text('StayBuddy v1.0.0', style: TextStyle(fontSize: 17)),
-
                   SizedBox(height: 3),
-
                   Text('Made with ❤️ in India', style: TextStyle(fontSize: 17)),
                 ],
               ),
@@ -153,28 +132,17 @@ class _FAQState extends State<FAQ> {
           ],
         ),
       ),
-
-      // =====================================
-      // NAVBAR
-      // =====================================
       bottomNavigationBar: const UserNavBar(selectedIndex: 3),
     );
   }
-
-  // =====================================
-  // FAQ ITEM
-  // =====================================
 
   Widget faqItem({required int index, required bool isExpanded}) {
     return GestureDetector(
       onTap: () {
         setState(() {
           if (expandedIndex == index) {
-            // Close the currently open question.
             expandedIndex = -1;
           } else {
-            // Open this question and automatically
-            // close the previous one.
             expandedIndex = index;
           }
         });
@@ -182,18 +150,12 @@ class _FAQState extends State<FAQ> {
 
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-
         width: double.infinity,
-
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 13),
-
         decoration: BoxDecoration(
           color: const Color(0xFFF7F7F7),
-
           borderRadius: BorderRadius.circular(12),
-
           border: Border.all(color: const Color(0xFFE0E0E0), width: 1.5),
-
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,
@@ -206,9 +168,6 @@ class _FAQState extends State<FAQ> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // =====================================
-            // QUESTION
-            // =====================================
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -221,24 +180,17 @@ class _FAQState extends State<FAQ> {
                     ),
                   ),
                 ),
-
                 Icon(
                   isExpanded
                       ? Icons.keyboard_arrow_up
                       : Icons.keyboard_arrow_down,
-
                   color: Colors.black,
                   size: 28,
                 ),
               ],
             ),
-
-            // =====================================
-            // ANSWER
-            // =====================================
             if (isExpanded) ...[
               const SizedBox(height: 8),
-
               Text(
                 faqList[index]['answer']!,
                 style: const TextStyle(fontSize: 13, height: 1.05),
