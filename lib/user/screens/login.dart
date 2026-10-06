@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './register.dart';
-import './home_screen.dart';
+import './home_header.dart';
 import './forgot_password.dart';
 
 class UserLoginScreen extends StatefulWidget {
@@ -105,7 +105,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                     },
                     child: const Text(
                       'Forgot Password?',
-                      style: TextStyle(color:  Color(0xFF428D52)),
+                      style: TextStyle(color: Color(0xFF428D52)),
                     ),
                   ),
                 ],
@@ -116,7 +116,7 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const UserHome()),
+                    MaterialPageRoute(builder: (context) => const HomeHeader()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
+import '../widgets/user_navbar.dart';
 
-class SearchPage extends StatefulWidget {
+class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
-  @override
-  State<SearchPage> createState() => _SearchPageState();
-}
-
-class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,12 +13,17 @@ class _SearchPageState extends State<SearchPage> {
         title: const Text(
           'Search',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 28,
-            fontWeight: FontWeight.w700,
+            color: Color(0xFF356B48),
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
+
+      body: const Center(
+        child: Text('Search Page', style: TextStyle(fontSize: 25)),
+      ),
+
+      bottomNavigationBar: const UserNavBar(selectedIndex: 1),
     );
   }
 }
