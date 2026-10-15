@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widgets/admin_navbar.dart';
+import '../../resources/stay.dart';
 
 class AdminHome extends StatelessWidget {
   const AdminHome({super.key});
@@ -68,6 +70,7 @@ class AdminHome extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const AdminNavBar(selectedIndex: 0),
     );
   }
 

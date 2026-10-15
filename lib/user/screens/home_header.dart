@@ -4,6 +4,7 @@ import './pg_home.dart';
 import './hostel_home.dart';
 import './room_home.dart';
 import '../widgets/user_navbar.dart';
+import 'search.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({super.key});
@@ -71,9 +72,6 @@ class _HomeHeaderState extends State<HomeHeader> {
         padding: const EdgeInsets.all(7.0),
         child: Column(
           children: [
-            // -------------------------
-            // COMMON HEADER
-            // -------------------------
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -84,10 +82,18 @@ class _HomeHeaderState extends State<HomeHeader> {
 
             const SizedBox(height: 20),
 
-            // -------------------------
-            // SEARCH
-            // -------------------------
             TextField(
+              readOnly: true, // 1. Stops the keyboard from opening on tap
+              onTap: () {
+                // 2. Redirects the user to the new page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const SearchPage(), // Replace with your actual Page name
+                  ),
+                );
+              },
               decoration: InputDecoration(
                 hintText: 'Search by city,area or locality...',
                 prefixIcon: const Icon(Icons.search),
@@ -109,9 +115,6 @@ class _HomeHeaderState extends State<HomeHeader> {
 
             const SizedBox(height: 20),
 
-            // -------------------------
-            // FILTER BUTTONS
-            // -------------------------
             Row(
               children: [
                 Expanded(

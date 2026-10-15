@@ -1,0 +1,2 @@
+CIE-2
+make layout of each screen on paper, showing whole structure.
